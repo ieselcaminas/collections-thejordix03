@@ -47,7 +47,7 @@ public class Altura {
     }
 
     public static void mostrarResultados(ArrayList<Double> alturas, double media) {
-        System.out.println("\nAlturas de los alumnos:");
+        System.out.println("Alturas de los alumnos:");
         for (int i = 0; i < alturas.size(); i++) {
             System.out.println("Alumno " + (i + 1) + ": " + alturas.get(i));
         }
