@@ -7,7 +7,7 @@ public class TelefonosII {
     public static void buscarNumero(HashMap<String, ArrayList<String>> agenda) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Introduce el nombre del contacto: ");
+        System.out.print("Introduce el nombre del contacto(Jordi o Pepe): ");
         String nombre = scanner.nextLine();
 
         if (agenda.containsKey(nombre)) {
@@ -28,18 +28,9 @@ public class TelefonosII {
         agenda.put("Pepe", telefonos);
 
         telefonos = new ArrayList<>();
-        telefonos.add("94884");
-        telefonos.add("34535");
-        agenda.put("Juan", telefonos);
-
-        telefonos = new ArrayList<>();
-        telefonos.add("123456");
-        agenda.put("Rosa", telefonos);
-
-        telefonos = new ArrayList<>();
         telefonos.add("987654");
-        telefonos.add("+0034 55555");
         agenda.put("Jordi", telefonos);
+
 
         buscarNumero(agenda);
     }
