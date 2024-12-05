@@ -51,7 +51,7 @@ public class Anagrams {
         return result.toString();
     }
     public static void main(String[] args) throws IOException {
-        String result = anagrams(6);
+        String result = anagrams(5);
         System.out.println(result);
     }
 }
