@@ -1,21 +1,12 @@
+package Flujos;
+
 import java.util.*;
 import java.util.stream.*;
 
 public class Ejercicio4 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        List<Integer> numbers = new ArrayList<>();
-
-        System.out.println("Introduce números (introduce un número negativo para terminar):");
-
-        // Leer la entrada del usuario
-        while (true) {
-            int input = scanner.nextInt();
-            if (input < 0) {
-                break; // Detener si el número es negativo
-            }
-            numbers.add(input); // Agregar el número a la lista
-        }
+        // Lista de números predefinida
+        List<Integer> numbers = Arrays.asList(2, 4, 6, 1, 3, 7, 5, -1);
 
         // Filtrar los números entre 1 y 5 y procesarlos con streams
         List<Integer> numerosfiltrados = numbers.stream()
@@ -23,7 +14,9 @@ public class Ejercicio4 {
                 .collect(Collectors.toList()); // Recopilar los números como lista
 
         // Imprimir los números resultantes
-        System.out.println("Números entre 1 y 5:");
-        numerosfiltrados.forEach(System.out::println);
+        System.out.println("Números entre 1 y 5");
+        for (Integer numero : numerosfiltrados) {
+            System.out.println(numero);
+        }
     }
 }
