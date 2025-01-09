@@ -18,12 +18,12 @@ public class Ejercicio4 {
         }
 
         // Filtrar los números entre 1 y 5 y procesarlos con streams
-        List<Integer> filteredNumbers = numbers.stream()
+        List<Integer> numerosfiltrados = numbers.stream()
                 .filter(num -> num >= 1 && num <= 5) // Filtrar números entre 1 y 5
                 .collect(Collectors.toList()); // Recopilar los números como lista
 
         // Imprimir los números resultantes
         System.out.println("Números entre 1 y 5:");
-        filteredNumbers.forEach(System.out::println);
+        numerosfiltrados.forEach(System.out::println);
     }
 }
