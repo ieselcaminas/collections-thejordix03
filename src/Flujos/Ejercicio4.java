@@ -8,14 +8,17 @@ public class Ejercicio4 {
         // Lista de números predefinida
         List<Integer> numbers = Arrays.asList(2, 4, 6, 1, 3, 7, 5, -1);
 
-        // Filtrar los números entre 1 y 5 y procesarlos con streams
-        List<Integer> numerosfiltrados = numbers.stream()
+        // Crear una nueva lista para almacenar los números filtrados
+        List<Integer> numerosFiltrados = new ArrayList<>();
+
+        // Filtrar los números entre 1 y 5 y agregarlos a la lista
+        numbers.stream()
                 .filter(num -> num >= 1 && num <= 5) // Filtrar números entre 1 y 5
-                .collect(Collectors.toList()); // Recopilar los números como lista
+                .forEach(numerosFiltrados::add); // Agregar los números filtrados a la lista
 
         // Imprimir los números resultantes
         System.out.println("Números entre 1 y 5");
-        for (Integer numero : numerosfiltrados) {
+        for (Integer numero : numerosFiltrados) {
             System.out.println(numero);
         }
     }
