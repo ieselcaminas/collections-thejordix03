@@ -26,10 +26,10 @@ public class Pais implements Comparable<Pais> {
         this.analfabetos = analfabetos;
     }
 
-    // Implementación del método compareTo para comparar por analfabetos
+    // Implementación del méetodo compare to
     @Override
     public int compareTo(Pais otroPais) {
-        // Comparar por el número de analfabetos (puedes cambiar esto si quieres otro criterio)
+        // Comparar por el número de analfabetos
         return Integer.compare(this.analfabetos, otroPais.analfabetos);
     }
 
