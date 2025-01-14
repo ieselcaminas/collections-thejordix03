@@ -10,6 +10,7 @@ class Tarea implements Comparable<Tarea> {
         this.duracion = duracion;
     }
 
+
     @Override
     public String toString() {
         return this.prioridad + " " + this.duracion;
