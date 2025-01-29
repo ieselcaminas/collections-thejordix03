@@ -27,12 +27,12 @@ class Tarea implements Comparable<Tarea> {
 
 public class Felipe {
     public static String ordenarTareas(List<Tarea> tareas) {
-        StringBuilder sb = new StringBuilder();
-        Collections.sort(tareas); // Ordenamos la lista según el criterio del compareTo
+        StringBuilder ordenar = new StringBuilder();
+        Collections.sort(tareas); // l compareTo
         for (Tarea t : tareas) {
-            sb.append(t).append("\n"); // Cada tarea en una nueva línea
+            ordenar.append(t).append("\n"); // Cada tarea en una nueva línea
         }
-        return sb.toString().trim(); // Eliminamos posibles líneas en blanco adicionales
+        return ordenar.toString().trim(); // Eliminamos posibles líneas en blanco adicionales
     }
 
     public static void main(String[] args) {

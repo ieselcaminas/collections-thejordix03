@@ -1,35 +1,31 @@
 package Comparable;
 
-public class Member implements Comparable<Member> {
+public class Member implements Comparable<Human> {
     private String name;
-    private int height;
+    private int salary; // Cambiado a salario
 
-    public Member(String name, int height) {
+    // Constructor
+    public Member(String name, int salary) {
         this.name = name;
-        this.height = height;
+        this.salary = salary;
     }
 
     public String getName() {
         return this.name;
     }
 
-    public int getHeight() {
-        return this.height;
+    public int getSalary() {
+        return this.salary;
     }
 
     @Override
     public String toString() {
-        return this.getName() + " (" + this.getHeight() + ")";
+        return this.getName() + " (" + this.getSalary() + ")";
     }
 
+    // Implementación de compareTo para ordenar por salario de mayor a menor
     @Override
-    public int compareTo(Member member) {
-        if (this.height == member.getHeight()) {
-            return 0;
-        } else if (this.height > member.getHeight()) {
-            return 1;
-        } else {
-            return -1;
-        }
+    public int compareTo(Human other) {
+        return Integer.compare(other.getSalary(), this.salary); // Invertido para mayor a menor
     }
 }
